@@ -23,11 +23,10 @@ public class Client1
             public void run() {
                 while (true) {
   
-                    // read the message to deliver.
-                    String msg = scanner.nextLine();
+                    String uzenet = scanner.nextLine();
                       
                     try {
-                        kimeno.writeUTF(msg);
+                        kimeno.writeUTF(uzenet);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -42,8 +41,8 @@ public class Client1
   
                 while (true) {
                     try {
-                        String msg = beerkezo.readUTF();
-                        System.out.println(msg);
+                        String uzenet = beerkezo.readUTF();
+                        System.out.println(uzenet);
                     } catch (IOException e) {
   
                         e.printStackTrace();
